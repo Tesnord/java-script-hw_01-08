@@ -1,11 +1,17 @@
 let total = 0;
 
 while (true) {
-  const input = prompt('Введите число');
-  if (input === null) {
+  const input = Number(prompt('Введите число'));
+  console.log(input);
+  if (input === 0) {
     break;
   } else {
-    total += Number(input);
+    if (!Number.isInteger(input)) {
+      alert('Вы ввели не число');
+      continue;
+    } else {
+      total += Number(input);
+    }
   }
 }
 alert(`Общая сумма чисел равна ${total}`);
