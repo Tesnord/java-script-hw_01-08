@@ -1,3 +1,4 @@
+
 class Storage {
   constructor(items) {
     this.items = items
@@ -27,7 +28,6 @@ const storage = new Storage([
   'Железные жупи',
   'Антигравитатор',
 ]);
-
 
 const items = storage.getItems();
 console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
