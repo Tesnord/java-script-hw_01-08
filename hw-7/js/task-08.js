@@ -4,9 +4,9 @@ let render = document.querySelector('[data-action="render"]')
 let destroy = document.querySelector('[data-action="destroy"]')
 
 function createBoxes(amount) {
-  render.addEventListener('click', event => {
+  render.addEventListener('click', (event) => {
     let range = 30
-    for (let i = 1; i <= amount; i++) {
+    for (let i = 1; i <= amount.value; i++) {
       let elemBox = document.createElement('div')
       elemBox.style.backgroundColor = '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase()
       elemBox.style.width = `${range}px`
@@ -20,11 +20,11 @@ function createBoxes(amount) {
 function destroyBoxes() {
   destroy.addEventListener('click', event => {
     document.querySelectorAll('div#boxes div').forEach(elem => {
-      console.log(elem.remove())
+      elem.remove()
     })
   })
 }
 
-createBoxes(input.value)
+createBoxes(input)
 
 destroyBoxes()
