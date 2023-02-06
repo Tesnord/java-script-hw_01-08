@@ -1,11 +1,16 @@
 let delivery = prompt('Введите названтие страны:');
 
-delivery.toLowerCase();
 let sity;
 let price;
+let message;
 
+if (delivery != null) {
+  delivery = delivery.toLowerCase()
+} else {
+  delivery = null
+}
 
-switch (delivery.toLowerCase()) {
+switch (delivery) {
   case 'китай':
     sity = 'Китай';
     price = 100;
@@ -26,13 +31,16 @@ switch (delivery.toLowerCase()) {
     sity = 'Ямайка';
     price = 120;
     break
+  case null:
+    message = 'Отменено пользователем!'
+    break
   default:
-    sity = ''
+    message = 'В вашей стране доставка не доступна'
     break
 }
 
-if (sity != '') {
-    alert(`Доставка в ${sity} будет стоить ${price} кредитов`);
+if (sity) {
+  alert(`Доставка в ${sity} будет стоить ${price} кредитов`);
 } else {
-  alert('В вашей стране доставка не доступна')
+  alert(`${message}`)
 }

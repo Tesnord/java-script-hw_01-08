@@ -12,7 +12,5 @@ user.premium = false;
 let arr = Object.keys(user)
 
 for (let key of arr) {
-  console.log(
-    `${key}: ${user[key]}`
-  );
+  console.log(`${key}: ${user[key]}`);
 }

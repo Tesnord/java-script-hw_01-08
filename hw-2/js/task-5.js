@@ -1,11 +1,5 @@
 let checkForSpam = function(message) {
-  message = message.toLowerCase()
-  if(message.indexOf('spam') >= 1 || message.indexOf('sale') >= 1) {
-    return true;
-  } else {
-    return false;
-  }
-  
+  return message.toLowerCase().indexOf('spam') >= 1 || message.toLowerCase().indexOf('sale') >= 1
 }
 console.log(checkForSpam('Latest technology news')); // false
 

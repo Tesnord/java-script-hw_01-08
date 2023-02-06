@@ -1,11 +1,11 @@
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
 const isLoginValid = function(login) {
-  return login.length >= 4 && login.length <= 16 ? 0 : 'Ошибка! Логин должен быть от 4 до 16 символов';
+  return login.length >= 4 && login.length <= 16 ? false : 'Ошибка! Логин должен быть от 4 до 16 символов';
 };
 
 const isLoginUnique = function(allLogins, login) {
-  return !allLogins.includes(login) ? 0 : 'Такой логин уже используется!';
+  return !allLogins.includes(login) ? false : 'Такой логин уже используется!';
 };
 
 const addLogin = function(allLogins, login) {
