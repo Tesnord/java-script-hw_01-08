@@ -1,4 +1,4 @@
-import { default as users } from './users.js';
+import users from './users.js';
 
 const getUsersWithEyeColor = (users, color) => {
   return users.filter(e => e.eyeColor == color);

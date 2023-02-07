@@ -1,4 +1,3 @@
-
 class Storage {
   constructor(items) {
     this.items = items
@@ -10,7 +9,6 @@ class Storage {
 
   addItem(item) {
     this.items.push(item)
-    return this.items
   }
 
   removeItem(item) {
@@ -18,7 +16,6 @@ class Storage {
     if (index !== -1) {
       this.items.splice(index, 1);
     }
-    return this.items
   }
 }
 

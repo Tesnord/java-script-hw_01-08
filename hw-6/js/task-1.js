@@ -1,4 +1,4 @@
-import {default as users} from './users.js';
+import users from './users.js';
 
 const getUserNames = users => {
   const arr = []

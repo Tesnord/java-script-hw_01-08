@@ -1,4 +1,4 @@
-import { default as users } from './users.js';
+import users from './users.js';
 
 const getUsersWithAge = (users, min, max) => {
   return users.filter(e => e.age >= min && e.age <= max)

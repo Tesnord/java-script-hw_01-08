@@ -1,4 +1,4 @@
-import {default as galleryItems} from './app.js'
+import galleryItems from './app.js'
 
 const gallery = document.querySelector('.gallery')
 let img = document.querySelector('.lightbox__image')

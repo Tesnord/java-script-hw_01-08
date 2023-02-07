@@ -1,4 +1,4 @@
-import { default as users } from './users.js';
+import users from './users.js';
 
 const getUsersWithFriend = (users, friendName) => {
   return users.filter(e => e.friends.find(e => e == friendName)).flatMap(e => e.name)

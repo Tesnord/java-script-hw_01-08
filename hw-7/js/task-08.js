@@ -1,10 +1,5 @@
-let box = document.querySelector('div#boxes')
-let input = document.querySelector('div#controls input')
-let render = document.querySelector('[data-action="render"]')
-let destroy = document.querySelector('[data-action="destroy"]')
-
 function createBoxes(amount) {
-  render.addEventListener('click', (event) => {
+  document.querySelector('[data-action="render"]').addEventListener('click', e => {
     let range = 30
     for (let i = 1; i <= amount.value; i++) {
       let elemBox = document.createElement('div')
@@ -12,19 +7,19 @@ function createBoxes(amount) {
       elemBox.style.width = `${range}px`
       elemBox.style.height = `${range}px`
       range += 10
-      box.append(elemBox)
+      document.querySelector('div#boxes').append(elemBox)
     }
   })
 }
 
 function destroyBoxes() {
-  destroy.addEventListener('click', event => {
+  document.querySelector('[data-action="destroy"]').addEventListener('click', e => {
     document.querySelectorAll('div#boxes div').forEach(elem => {
       elem.remove()
     })
   })
 }
 
-createBoxes(input)
+createBoxes(document.querySelector('div#controls input'))
 
 destroyBoxes()
